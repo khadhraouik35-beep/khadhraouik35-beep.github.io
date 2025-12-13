@@ -1,432 +1,67 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8858989765307569"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8858989765307569"
      crossorigin="anonymous"></script>
-   <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
-  
+  <title>Daily News Hub | News – Weather – Football – Markets</title>
+
+<meta name="description"
+content="Global news, live football, weather by location, financial markets, currencies and trends. Updated automatically.">
+
+<meta name="keywords"
+content="news, football live, weather, markets, currency exchange, trends">
+
+<meta property="og:title" content="Daily News Hub">
+<meta property="og:description" content="All-in-one global news & live information platform">
+<meta property="og:type" content="website">
+
+<script src="main.js" defer></script>
+<link rel="stylesheet" href="main.css">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مكتبة الأفلام</title>
-
-<style>
-body{
-  margin:0;background:#0d0d0d;color:#fff;
-  font-family:Arial, sans-serif;
-}
-header{
-background:#000;padding:15px;text-align:center;
-position:sticky;top:0;z-index:100;
-border-bottom:2px solid #e50914;
-}
-nav{
-display:flex;overflow-x:auto;gap:10px;
-padding:10px;background:#111;
-}
-nav button{
-padding:8px 18px;background:#222;color:#fff;border:none;
-border-radius:20px;font-size:15px;white-space:nowrap;
-}
-nav button:hover{background:#e50914;}
-.grid{
-padding:10px;
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
-gap:15px;
-}
-.card{
-background:#1b1b1b;border-radius:8px;cursor:pointer;
-transition:0.25s;overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.5);
-}
-.card:hover{transform:scale(1.07);}
-.card img{
-width:100%;height:220px;object-fit:cover;
-}
-.card h4{
-margin:8px;font-size:16px;text-align:center;
-}
-
-.server-box{
-height:65vh;padding:10px;
-}
-.server-box iframe{
-width:100%;height:100%;border:none;background:#000;
-border-radius:10px;
-}
-.back{
-padding:8px 15px;background:#e50914;border:none;
-border-radius:5px;color:#fff;font-size:16px;
-margin-right:auto;
-}
-
-.episodes h3{
-padding:10px;margin:0;background:#111;
-border-left:4px solid #e50914;
-}
-.episodes button{
-padding:7px 15px;background:#222;border:none;color:#fff;
-border-radius:6px;margin:5px;font-size:14px;
-}
-.episodes button:hover{background:#e50914;}
-</style>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global Hub</title>
+<link rel="stylesheet" href="main.css">
+<script src="main.js" defer></script>
+  <header>
+  <h1 data-i18n="title"></h1>
+  <div id="clock" style="font-size:14px;color:#555;margin-top:6px"></div>
+</header>
 </head>
+
 <body>
-<amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-8858989765307569">
-</amp-auto-ads>
-<header><h2>مكتبة الأفلام و المسلسلات</h2></header>
-<nav id="tabs"></nav>
+<header><h1>Global News & Live Data</h1></header>
 
-<!-- ⭐ إعلان رقم 1 — الصفحة الرئيسية -->
-<div style="padding:10px;">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8858989765307569"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="+20+s6-1h-2r+au"
-     data-ad-client="ca-pub-8858989765307569"
-     data-ad-slot="5429319367"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<div class="container">
+
+<div class="card">
+<h2>Latest World News</h2>
+<iframe src="https://www.bing.com/news/search?q=latest+world+news&form=MSNVS"></iframe>
 </div>
 
-<div id="itemsGrid" class="grid"></div>
+<div class="card">
+<h2>Technology & Business</h2>
+<iframe src="https://www.bing.com/news/search?q=technology+business&form=MSNVS"></iframe>
+</div>
 
-<div id="watchPage" style="display:none;padding-bottom:30px;">
-  <header style="display:flex;align-items:center;gap:20px;">
-    <button class="back" onclick="goBack()">رجوع</button>
-    <h2 id="movieTitle" style="flex:1;"></h2>
-  </header>
-
-  <!-- ⭐ إعلان رقم 2 — صفحة مشاهدة الفيلم -->
-  <div style="padding:10px;">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8858989765307569"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="+20+s6-1h-2r+au"
-     data-ad-client="ca-pub-8858989765307569"
-     data-ad-slot="5429319367"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </div>
-
-  <div class="server-box">
-    <iframe id="serverFrame" allowfullscreen></iframe>
-  </div>
-
-  <div id="episodesList" class="episodes"></div>
-
-  <!-- ⭐ إعلان رقم 3 — أسفل حلقات المسلسلات -->
-  <div style="padding:10px;">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8858989765307569"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="+20+s6-1h-2r+au"
-     data-ad-client="ca-pub-8858989765307569"
-     data-ad-slot="5429319367"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  </div>
+<div class="card">
+<h2>Top Stories Today</h2>
+<iframe src="https://www.bing.com/news/search?q=top+stories&form=MSNVS"></iframe>
+</div>
 
 </div>
 
-<script>
-// زر الرجوع
-window.addEventListener("popstate", ()=>{ goBack(); });
-function pushState(){ history.pushState({page:"watch"}, ""); }
-
-// ⭐⭐⭐ تمت الإضافة: دالة تشغيل الإعلان بعد الضغط ⭐⭐⭐
-function refreshAds(){
-  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
-}
-
-// -----------------------------
-// التبويبات
-// -----------------------------
-const tabs = ["الكل","أكشن","دراما","كوميديا","رعب","خيال علمي","مسلسلات","الأكثر مشاهدة"];
-
-// -----------------------------
-// الأفلام — 100 رابط
-// -----------------------------
-const filmServers = [
-  "https://hglink.to/e/0uhplzzrsbmr",
-  "https://vipserver.liiivideo.com/embed-h50rewwcvk82.html",
-  "https://www.vidspeeds.com:2053/embed-0sqql77uvsed.html",
-  "https://www.vidspeeds.com:2053/embed-u6v08qupu0ro.html",
-  "https://www.vidspeeds.com:2053/embed-mcp8hd8q9td2.html",
-  "https://vidoba.cc/embed-d9ie1k9tq9l5.html",
-  "https://www.vidroba.com:2053/embed-orev1bit9j8q.html",
-  "https://www.vidroba.com:2053/embed-bxkiq5gmrykw.html",
-  "https://movearnpre.com/embed/7x3i4nriqqyt",
-  "https://www.vidroba.com:2053/embed-phdzqrkrdllt.html",
-  "https://hglink.to/e/iivqmdii9zc2",
-  "https://www.vidspeeds.com/embed-pzcgljb67pkf.html",
-  "https://www.vidspeeds.com:2053/embed-vzs6kx0hixqx.html",
-  "https://www.vidspeeds.com:2053/embed-gjdxzl1p5m25.html",
-"https://www.vidspeeds.com/embed-s6hzdc8djokj.html",
-  "https://www.vidspeeds.com:2053/embed-ipwhmka1ldu2.html",
-  "https://www.vidspeeds.com:2053/embed-8k639i8ynoju.html",
-  "https://www.vidspeeds.com:2053/embed-k64h88kpfqnb.html",
-  "https://www.vidspeeds.com:2053/embed-i13pyhpogyvw.html",
-  "https://www.vidspeeds.com:2053/embed-5fz5d5bcyksn.html",
-  "https://www.vidroba.com:2053/embed-omuqe64e4by7.html",
-  "http://vidmoly.net/embed-u9z1exdjq320.html",
-  "https://www.vidspeeds.com:2053/embed-pmtrohtmjz4y.html",
-  "https://www.vidroba.com:2053/embed-9lsi2vjlfobf.html",
-  "https://www.vidspeeds.com:2053/embed-sp612uzd4a6j.html",
-  "https://www.vidspeeds.com:2053/embed-pv3ozn0znj9b.html",
-  "https://vipserver.liiivideo.com/embed-11b4lko8zlea.html",
-  "https://www.vidspeeds.com:2053/embed-b6l80cn6ygsi.html",
-  "https://www.vidspeeds.com:2053/embed-9plt91w3oous.html",
-  "https://vidroba.com:2053/embed-0tk9hofu6jgw.html",
-  "https://www.vidspeeds.com/embed-m8crrf6xhh6u.html",
-  "https://peytonepre.com/embed/7ih38mbwc3ap",
-  "https://movearnpre.com/embed/eeahk8us1klz",
-  "https://www.vidspeeds.com:2053/embed-64vkoi0o832z.html",
-  "https://movearnpre.com/embed/dcvx7y47wlud",
-  "https://movearnpre.com/embed/d0c2301aw11m",
-  "https://www.vidspeeds.com:2053/embed-v2mkckw0ivgf.html",
-  "https://www.vidspeeds.com:2053/embed-nzkyb9ey47ab.html",
-  "https://dhtpre.com/embed/34yfpts0dnrg",
-  "https://www.vidroba.com:2053/embed-wpigqh7dm261.html",
-  "https://www.vidroba.com:2053/embed-f5xkr43oq7lu.html",
-  "https://www.vidroba.com:2053/embed-a22swtsr99m0.html",
-  "https://www.vidspeeds.com:2053/embed-c63hj11gp65o.html",
-  "https://www.vidspeeds.com:2053/embed-gdtq7a3vucnx.html",
-  "https://www.vidspeeds.com:2053/embed-euqigxokhc4q.html",
-  "https://www.vidspeeds.com:2053/embed-fnkmodb5v8gi.html",
-  "https://peytonepre.com/embed/v7rww6r5a2vi",
-  "https://vipserver.liiivideo.com/embed-2jw23fr204c3.html",
-  "https://www.vidspeeds.com:2053/embed-uc6j9ewdsz4m.html",
-  "https://www.vidroba.com:2053/embed-1is4vbmvuasv.html",
-  "https://vidroba.com:2053/embed-dz4jknruaonl.html",
-  "https://www.vidspeeds.com/embed-40iggpsanfa1.html",
-  "https://www.vidspeeds.com:2053/embed-w3qbja9z6kfr.html",
-  "https://www.vidspeeds.com:2053/embed-s9539pmzmoi3.html",
-  "https://www.vidspeeds.com:2053/embed-vocbxe6vykkk.html",
-  "https://vidmoly.net/embed-to7sie7u2kzv.html",
-  "https://vipserver.liiivideo.com/embed-nnjphpl8wnf3.html",
-  "https://vipserver.liiivideo.com/embed-h2sy9tsghqt5.html",
-  "https://vidmoly.net/embed-9x70p39x01ze.html",
-  "https://vidmoly.net/embed-9x70p39x01ze.html",
-  "https://vidmoly.net/embed-cv46robn5mna.html",
-  "https://www.vidspeeds.com:2053/embed-gblhz2d2mphn.html",
-  "https://www.vidspeeds.com:2053/embed-aggksv5zn4u8.html",
-  "https://playerwish.com/e/uajnwe3p49to",
-  "https://www.vidspeeds.com:2053/embed-uusjue3g6oqh.html",
-  "https://www.vidspeeds.com:2053/embed-uusjue3g6oqh.html",
-  "https://www.vidspeeds.com/embed-rautvgp6web8.html",
-  "https://www.vidroba.com:2053/embed-baigmikp5dal.html",
-  "https://www.vidroba.com:2053/embed-tzwgmmv8b8ie.html",
-  "https://www.vidspeeds.com:2053/embed-uizc52t6x8h6.html",
-  "https://vidhidepre.com/embed/o185rxudixx0",
-  "https://www.vidspeeds.com:2053/embed-vj84vyxuxenr.html",
-  "https://vipserver.liiivideo.com/embed-g7ig3tik89mf.html",
-  "https://vipserver.liiivideo.com/embed-4poax28xcxf8.html",
-  "https://www.vidspeeds.com:2053/embed-l953h1jq54eb.html",
-  "https://www.vidspeeds.com:2096/embed-lgx114hegrp4.html",
-  "https://www.vidspeeds.com:2053/embed-ex13edssaol9.html",
-  "https://vipserver.liiivideo.com/embed-8rxnh5xjjiy2.html",
-  "https://www.vidspeeds.com:2053/embed-9vg30r9gluip.html",
-  "https://www.vidspeeds.com:2053/embed-dmflhjedvwuo.html",
-  "https://vipserver.liiivideo.com/embed-lekexwi7wjs6.html",
-  "https://www.vidspeeds.com:2053/embed-9gdunvjlyn2e.html",
-  "https://filemoon.sx/e/10q1fmjiy4u4",
-  "https://vipserver.liiivideo.com/embed-m5s4f1xn2hpl.html",
-  "https://www.vidspeeds.com:2053/embed-hzozv7ugm8uj.html",
-  "https://www.vidroba.com:2053/embed-fq15pgyr2lt9.html",
-  "https://vipserver.liiivideo.com/embed-jr32vona027f.html",
-  "https://vipserver.liiivideo.com/embed-gdgefbdmu8lr.html",
-  "https://vipserver.liiivideo.com/embed-gdgefbdmu8lr.html",
-  "https://www.vidspeeds.com:2053/embed-1s5nh4rj7ll0.html",
-  "https://iplayerhls.com/e/qqtwcqgd53ox",
-  "https://vipserver.liiivideo.com/embed-phdg8l06jp9b.html",
-  "https://www.vidroba.com:2053/embed-gida4nnis98r.html",
-  "https://vipserver.liiivideo.com/embed-lit8k6ztfvt3.html",
-  "https://vipserver.liiivideo.com/embed-tbznbvct68xg.html",
-  "ضع_هنا_رابط_الفيلم_96","ضع_هنا_رابط_الفيلم_97","ضع_هنا_رابط_الفيلم_98",
-  "ضع_هنا_رابط_الفيلم_99","ضع_هنا_رابط_الفيلم_100"
-];
-
-// -----------------------------
-// أسماء الأفلام
-// -----------------------------
-const movieNames = [
-"John Wick","Fast & Furious 7","The Dark Knight","Interstellar","Inception",
-"Gladiator","The Matrix","Avatar","Avengers Endgame","Iron Man",
-"Mission Impossible Fallout","Mad Max Fury Road","Joker","Dune","Oppenheimer",
-"Spider-Man No Way Home","The Equalizer","Taken","Black Panther","Tenet",
-"Doctor Strange","Rush Hour","The Revenant","The Wolf of Wall Street",
-"Shutter Island","The Godfather","Scarface","The Irishman","The Gentlemen",
-"Nobody","The Meg","Gravity","Edge of Tomorrow","Lucy","Oblivion",
-"Top Gun Maverick","Mortal Kombat","Rampage","San Andreas","Man of Steel",
-"Creed","Rocky","Hacksaw Ridge","1917","Fury","World War Z","I Am Legend",
-"King Kong","The Hunger Games","Divergent","The Nun","The Conjuring",
-"Annabelle","IT","Smile","Insidious","The Grudge","Lights Out",
-"Deadpool","Logan","Wolverine","Thor","Hulk","Captain America","Black Adam",
-"Shazam","Aquaman","Transformers","Pacific Rim","Godzilla","Kong Skull Island",
-"Pirates of the Caribbean","Sherlock Holmes","The Mummy","Aladdin","Harry Potter",
-"Lord of the Rings","Hobbit","Snowden","American Sniper","Sicario","Heat",
-"Collateral","Baby Driver","Drive","La La Land","A Quiet Place","Real Steel",
-"Robin Hood","Troy","300","Clash of Titans","Wrath of Titans","Kingsman","Hitman"
-];
-
-// -----------------------------
-// روابط أول حلقة لكل مسلسل — أنت تملأها
-// -----------------------------
-const seriesBaseLinks = [
-  "https://vidmoly.net/embed-syit0qt0hdgi.html",
-  "https://vipserver.liiivideo.com/embed-37s41mhlwtzw.html",
-  "https://vidmoly.net/embed-565jr4porjal.html",
-  "https://filemoon.sx/e/tl3yr4vk8527",
-  "https://vidhideplus.com/embed/ry2o5yycqz9o",
-  "https://filemoon.sx/e/d9uj2zihikiw",
-  "https://vidmoly.net/embed-gwj7tcwrvnli.html",
-  "https://vipserver.liiivideo.com/embed-wyqnw0z98lto.html",
-  "https://hglink.to/e/3k2jrhe8lvpx",
-  "https://movearnpre.com/embed/pttf0hq79778"
-];
-
-// -----------------------------
-// أسماء المسلسلات (10 فقط)
-// -----------------------------
-const seriesNames = [
-"Breaking Bad","Game of Thrones","Peaky Blinders","La Casa de Papel","Vikings",
-"The Witcher","Dark","Stranger Things","The Last of Us","The Walking Dead"
-];
-
-let allItems = [];
-
-// -----------------------------
-// الأفلام
-// -----------------------------
-movieNames.forEach((name, i)=>{
-  allItems.push({
-    id:i+1,
-    type:"movie",
-    title:name,
-    poster:"movie"+(i+1)+".jpg",
-    category:(i%5===0?"أكشن":i%5===1?"دراما":i%5===2?"كوميديا":i%5===3?"رعب":"خيال علمي"),
-    servers:[ filmServers[i] ]
-  });
-});
-
-// -----------------------------
-// دالة توليد الحلقات تلقائيًا
-// -----------------------------
-function generateSeriesLinks(baseLink){
-  let list = [];
-  for(let s=1; s<=5; s++){
-    let eps = [];
-    for(let e=1; e<=12; e++){
-      let link = baseLink
-        .replace("season1","season"+s)
-        .replace("ep1","ep"+e);
-      eps.push(link);
-    }
-    list.push({ episodes: eps });
-  }
-  return list;
-}
-
-// -----------------------------
-// المسلسلات (توليد تلقائي)
-// -----------------------------
-seriesNames.forEach((name,i)=>{
-  allItems.push({
-    id:200+i+1,
-    type:"series",
-    title:name,
-    poster:"series"+(i+1)+".jpg",
-    category:"مسلسلات",
-    servers:[""],
-    seasons: generateSeriesLinks(seriesBaseLinks[i])
-  });
-});
-
-const tabDiv=document.getElementById("tabs");
-tabs.forEach(t=>{
-  const b=document.createElement("button");
-  b.textContent=t;
-  b.onclick=()=>filterItems(t);
-  tabDiv.appendChild(b);
-});
-
-const grid=document.getElementById("itemsGrid");
-function showAll(list){
-  grid.innerHTML="";
-  list.forEach(item=>{
-    const c=document.createElement("div");
-    c.className="card";
-    c.onclick=()=>{
-
-      // ⭐⭐⭐ تمت الإضافة هنا: إعلان عند الضغط على فيلم ⭐⭐⭐
-      refreshAds();
-
-      openItem(item.id);
-    };
-    c.innerHTML=`
-      <img src="${item.poster}">
-      <h4>${item.title}</h4>
-    `;
-    grid.appendChild(c);
-  });
-}
-showAll(allItems);
-
-function filterItems(t){
-  if(t==="الكل") showAll(allItems);
-  else if(t==="مسلسلات") showAll(allItems.filter(x=>x.type==="series"));
-  else showAll(allItems.filter(x=>x.category===t));
-}
-
-function openItem(id){
-
-  // ⭐⭐⭐ تمت الإضافة هنا أيضًا ⭐⭐⭐
-  refreshAds();
-
-  pushState();
-  const item=allItems.find(x=>x.id==id);
-
-  document.getElementById("itemsGrid").style.display="none";
-  document.getElementById("watchPage").style.display="block";
-
-  document.getElementById("movieTitle").textContent=item.title;
-  document.getElementById("serverFrame").src=item.servers[0];
-
-  let html="";
-  if(item.type==="series"){
-    item.seasons.forEach((s,si)=>{
-      html+=`<h3>الموسم ${si+1}</h3>`;
-      s.episodes.forEach((ep,ei)=>{
-
-        // ⭐⭐⭐ إعلان عند الضغط على الحلقة ⭐⭐⭐
-        html+=`<button onclick="document.getElementById('serverFrame').src='${ep}'; refreshAds();">حلقة ${ei+1}</button>`;
-
-      });
-    });
-  }
-  document.getElementById("episodesList").innerHTML=html;
-}
-
-function goBack(){
-  document.getElementById("watchPage").style.display="none";
-  document.getElementById("itemsGrid").style.display="grid";
-  document.getElementById("serverFrame").src="";
-}
-</script>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" data-i18n="home"></a>
+  <a href="trends.html" data-i18n="trends"></a>
+  <a href="weather.html" data-i18n="weather"></a>
+  <a href="football.html" data-i18n="football"></a>
+  <a href="markets.html" data-i18n="markets"></a>
+  <a href="currency.html" data-i18n="currency"></a>
+  <a href="maps.html" data-i18n="maps"></a>
+  <a href="about.html" data-i18n="about"></a>
+  <a href="privacy.html" data-i18n="privacy"></a>
+</nav>
 
 </body>
 </html>

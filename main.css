@@ -1,0 +1,67 @@
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#eef2ff,#ffffff);
+  color:#111;
+  padding-bottom:90px;
+}
+
+header{
+  background:#ffffff;
+  padding:16px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+h1{margin:0;font-size:26px}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:18px;
+}
+
+.card{
+  background:#fff;
+  padding:18px;
+  margin-bottom:24px;
+  border-radius:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+
+iframe{
+  width:100%;
+  min-height:450px;
+  border:none;
+  border-radius:14px;
+}
+
+/* ===== Navbar ثابتة ===== */
+.navbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#ffffff;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  padding:10px 6px;
+  z-index:99999;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:#1f4ed8;
+  font-weight:bold;
+  font-size:13px;
+  padding:6px 8px;
+  border-radius:8px;
+}
+
+.navbar a:hover{
+  background:#e6ecff;
+}
